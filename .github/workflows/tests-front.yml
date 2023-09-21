@@ -1,0 +1,29 @@
+name: Frontend tests
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'my-moni-frontend/**'
+  pull_request:
+    paths:
+      - 'my-moni-frontend/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+        working-directory: my-moni-frontend
+      - run: npm run build --if-present
+        working-directory: my-moni-frontend
+      - run: npm test
+        working-directory: my-moni-frontend

@@ -1,0 +1,54 @@
+# Directories
+node_modules/
+build/
+target/
+.idea/
+
+# Files
+*.log
+*.iml
+
+# IDE-specific
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.idea
+
+# React-specific
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.pnp
+.pnp.js
+
+# Compiled Java classes
+*.class
+
+# Spring Boot-specific
+# Target folder
+/target/
+# Spring Boot property file
+/application.properties
+
+# IDE-specific files (IntelliJ IDEA)
+.idea/
+*.iws
+*.ipr
+*.iws
+*.iml
+
+# Compiled binary
+/out/
+/dist/
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/test-results/
+/playwright-report/
+/playwright/.cache/
